@@ -8,17 +8,17 @@ body {
 }
 
 h1 {
-  font-family: 'DM Serif Display';
+  font-family: 'Vollkorn';
   font-size: 32px;
   line-height: 40px;
-  margin-bottom: 12px;
+  margin-bottom: 0px;
   margin-top: 0px;
-
   color: #fafafa;
+  font-style: italic;
 }
 
 h2 {
-  font-family: 'DM Serif Text';
+  font-family: 'Vollkorn';
   font-size: 20px;
   line-height: 28px;
   margin-bottom: 16px;
@@ -38,6 +38,7 @@ p {
 
 .accordion_body {
   max-width: 320px;
+  margin-top: 32px;
 }
 
 .accordion .accordion_container {
@@ -69,7 +70,14 @@ bottom and increases font size. Also makes its cursor a pointer */
 
 /* Hides the content (height: 0), decreases font size, justifies text and adds transition */
 
-.accordion .content {
+.accordion .content_short {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+.accordion .content_long {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -86,7 +94,12 @@ bottom and increases font size. Also makes its cursor a pointer */
 
 /* Unhides the content part when active. Sets the height */
 
-.accordion .accordion_container.active .content {
+.accordion .accordion_container.active .content_short {
+  height: 420px;
+  padding-bottom: 16px;
+}
+
+.accordion .accordion_container.active .content_long {
   height: 540px;
   padding-bottom: 16px;
 }
@@ -120,7 +133,7 @@ bottom and increases font size. Also makes its cursor a pointer */
   flex-direction: column;
   max-width: 320px;
 
-  margin-bottom: 64px;
+  margin-bottom: 32px;
 }
 
 .container-lvl3 {
