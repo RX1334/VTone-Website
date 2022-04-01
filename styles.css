@@ -12,9 +12,13 @@ h1 {
   font-size: 32px;
   line-height: 40px;
   margin-bottom: 0px;
-  margin-top: 0px;
+  margin-top: 36px;
   color: #fafafa;
   font-style: italic;
+}
+
+a {
+  color: #fafafa;
 }
 
 h2 {
@@ -90,7 +94,6 @@ bottom and increases font size. Also makes its cursor a pointer */
   margin-left: 0;
   border: 1px solid #fafafa;
 }
-
 
 /* Unhides the content part when active. Sets the height */
 
